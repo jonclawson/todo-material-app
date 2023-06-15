@@ -34,7 +34,8 @@ export class ListComponent implements AfterViewInit {
   }
 
   loadTasks() {
-    this.tasks = this.taskService.list().reverse();
+    this.tasks = this.taskService.list();
+    this.tasks.sort((a, b) => a.id < b.id ? -1 : 1).reverse();
     this.setDataSource();
   }
 

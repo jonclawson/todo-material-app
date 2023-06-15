@@ -2,12 +2,12 @@ import { Injectable } from '@angular/core';
 import { Task } from './task.model';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class TaskService {
   private tasks: Task[] = [];
 
-  constructor() { }
+  constructor() {}
 
   list(): Task[] {
     const storage = window.localStorage.getItem('todo-items');
@@ -25,7 +25,7 @@ export class TaskService {
   }
 
   read(id: number): Task | undefined {
-    return this.tasks.find(t => t.id === id);
+    return this.tasks.find((t) => t.id === id);
   }
 
   update(updates: Task): void {
