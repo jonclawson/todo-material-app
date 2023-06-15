@@ -1,0 +1,4 @@
+{
+  "installDependencies": true,
+  "startCommand": "cd ./app/; npm install; ng serve;"
+}

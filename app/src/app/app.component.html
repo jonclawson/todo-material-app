@@ -1,0 +1,12 @@
+
+<app-toolbar (onToggle)="drawer.toggle()"></app-toolbar>
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side"> </mat-drawer>
+
+
+
+<app-list></app-list>
+
+</mat-drawer-container>
+
+<router-outlet></router-outlet>
